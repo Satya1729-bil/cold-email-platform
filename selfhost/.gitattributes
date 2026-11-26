@@ -1,0 +1,5 @@
+# Keep Linux line endings on scripts so they run on the AWS server,
+# even when they are edited on Windows.
+*.sh text eol=lf
+Caddyfile.template text eol=lf
+brand.env text eol=lf

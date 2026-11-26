@@ -1,0 +1,34 @@
+# Made by selfhost/deploy-ec2.sh from this template. __DOMAIN__ is replaced
+# with DOMAIN from selfhost/brand.env. Caddy gets free HTTPS certificates
+# for every name below on its own.
+{
+	email admin@__DOMAIN__
+}
+
+app.__DOMAIN__ {
+	reverse_proxy localhost:5173
+}
+
+admin.__DOMAIN__ {
+	reverse_proxy localhost:5174
+}
+
+api.__DOMAIN__ {
+	reverse_proxy localhost:8080
+}
+
+ws.__DOMAIN__ {
+	reverse_proxy localhost:4000
+}
+
+track.__DOMAIN__ {
+	reverse_proxy localhost:3000
+}
+
+forms.__DOMAIN__ {
+	reverse_proxy localhost:8090
+}
+
+portal.__DOMAIN__ {
+	reverse_proxy localhost:8095
+}
